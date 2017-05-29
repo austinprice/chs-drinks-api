@@ -21,9 +21,9 @@ app.use(function(req, res, next) {
 // set the static files location for our Ember application
 app.use(express.static(__dirname + '/public'));
 
-//bodyParser Middleware to allow different encoding requests
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());       // to support JSON-encoded bodies
+// //bodyParser Middleware to allow different encoding requests
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());       // to support JSON-encoded bodies
 
 
 //Routes API
