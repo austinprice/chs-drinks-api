@@ -3,7 +3,7 @@
 // modules =================================================
 var express        = require('express');
 var app            = express();
-var bodyParser     = require('body-parser');
+// var bodyParser     = require('body-parser');
 
 // set our port
 var port = process.env.PORT || 3000;
@@ -20,6 +20,7 @@ app.use(function(req, res, next) {
 
 // set the static files location for our Ember application
 app.use(express.static(__dirname + '/public'));
+app.use(require('prerender-node').set('prerenderToken', 'OHZYyhInkZ1ZfjgGU7Uh'));
 
 // //bodyParser Middleware to allow different encoding requests
 // app.use(bodyParser.urlencoded({ extended: true }));
